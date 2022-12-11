@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <div class="big-player">
+        <div class="bar-wrapper">
+            <span class="song-name">Aqua Caelestis</span>
+            <div class="progress-bar-wrapper">
+              <div class="duration-time">
+                <span class="audio-current-time">00:00</span>
+                <span class="audio-duration">00:39</span>
+              </div>
+              <input class="progress-bar range" type="range" min="0" max="100" value="0"/>
+            </div>
+            <div class="volume-wrapper">
+                <button class="volume"></button>
+                <input class="volume-bar range" type="range" min="0" max="100" value="100"/>
+            </div>
+            <div class="player-controls">
+              <button class="play-prev player-icon"></button>
+              <button class="play player-icon"></button>
+              <button class="play-next player-icon"></button>
+            </div>
+        </div>
+    </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" value="Kiev" placeholder="[Enter City]"/>
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" id="name"/>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="settings">
+      <h2 class="settings-title">Settings</h2>
+      <button class="settings-btn"></button>
+      <div class="settings-menu">
+        <div>
+          <div class="images-api">
+            <h2 class="images-api-title">Images</h2>
+            <button class="flickr"></button>
+            <button class="unsplash"></button><br>
+            <button class="github"></button>
+          </div>
+          <div class="languages">
+            <h2 class="languages-title">Language</h2>
+            <button class="eng">ENG</button>
+            <button class="ru">RU</button>
+          </div>
+        </div>
+        <div class="show">
+            <h3 class="show-title">Show</h3>
+            <div class="show-item">
+              <label class="show-label-text show-label-text-time" for="time-checkbox">Time</label>
+              <input class="checkbox-input checkbox-input-time" type="checkbox" id="time-checkbox" checked/>
+              <label class="checkbox-label" for="time-checkbox"></label>
+            </div>
+            <div class="show-item">
+              <label class="show-label-text show-label-text-date" for="date-checkbox">Date</label>
+              <input class="checkbox-input" type="checkbox" id="date-checkbox" checked>
+              <label class="checkbox-label" for="date-checkbox"></label>
+            </div>
+            <div class="show-item">
+              <label class="show-label-text show-label-text-greeting" for="greeting-checkbox">Greeting</label>
+              <input class="checkbox-input" type="checkbox" id="greeting-checkbox" checked>
+              <label class="checkbox-label" for="greeting-checkbox"></label>
+            </div>
+            <div class="show-item">
+              <label class="show-label-text show-label-text-quotes" for="quotes-checkbox">Quotes</label>
+              <input class="checkbox-input" type="checkbox" id="quotes-checkbox" checked>
+              <label class="checkbox-label" for="quotes-checkbox"></label>
+            </div>
+            <div class="show-item">
+              <label class="show-label-text show-label-text-weather" for="weather-checkbox">Weather</label>
+              <input class="checkbox-input" type="checkbox" id="weather-checkbox" checked>
+              <label class="checkbox-label" for="weather-checkbox"></label>
+            </div>
+            <div class="show-item">
+              <label class="show-label-text show-label-text-player" for="player-checkbox">Player</label>
+              <input class="checkbox-input" type="checkbox" id="player-checkbox" checked>
+              <label class="checkbox-label" for="player-checkbox"></label>
+            </div>
+            <div class="show-item">
+              <label class="show-label-text show-label-text-todo" for="todo-checkbox">To Do List</label>
+              <input class="checkbox-input" type="checkbox" id="todo-checkbox" checked>
+              <label class="checkbox-label" for="todo-checkbox"></label>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="quotes">
+      <button class="change-quote"></button>
+      <div class="quoter" id="quotation"></div>
+      <div class="author" id="source"></div>
+    </div>
+    <div class="todo">
+      <h3 class="todo-title">To Do List</h3>
+      <button class="todo-btn"></button>
+      <div class="todo-inner">
+        <input class="todo-input" type="text" placeholder="[Add task]" id="new-todo">
+        <div class="todo-buttons">
+          <button class="add-btn">Add</button>
+          <button class="clear-btn">Clear</button>
+        </div>
+        <ul class="todo-list"></ul>
+      </div>
+    </div>
+  </footer>
+  <script src="js/time.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/weather.js"></script>
+  <script type="module" src="js/player.js"></script>
+  <script type="module" src="js/playList.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/localStorage.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todoList.js"></script>
+  <script src="js/console.js"></script>
+
+</body>
+</html>
